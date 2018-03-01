@@ -9,6 +9,6 @@ func ExampleIncrement() {
 }
 
 func ExampleGauge() {
-	response := []byte{"Hello, World"}
-	stats.Gauge("api.get.bytes", len(response))
+	response := []byte("Hello, World")
+	stats.Gauge("api.get.bytes", float32(len(response)))
 }
